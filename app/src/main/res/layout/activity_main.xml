@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
 
-    <RelativeLayout
+<RelativeLayout
         android:id="@+id/excusescreen"
         android:clipChildren="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        tools:context=".MainActivity">
-
+        tools:context=".MainActivity"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
 
         <LinearLayout
             android:id="@+id/imlateTopBar"
             android:layout_width="fill_parent"
-            android:layout_height="44dip"
-            android:layout_alignParentBottom="true"
-            android:background="#8BC34A">
+            android:layout_height="65dip"
+            android:layout_alignParentBottom="true">
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewpager"
@@ -31,42 +26,51 @@
 
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tbMenuPrincipal"
-                    android:layout_width="412dp"
-                    android:layout_height="49dp"
-                    android:layout_marginBottom="200dip"
-                    android:background="@color/white"
-                    app:tabIconTint="#FFFFFF"
-                    app:tabIndicatorColor="#FFFFFF"
-                    app:tabSelectedTextColor="#FFFFFF">
+                    android:layout_width="420dp"
+                    android:layout_height="69dp"
+                    android:layout_marginBottom="190dip"
+                    android:background="@color/white">
 
                     <com.google.android.material.tabs.TabItem
-                        android:id="@+id/CHATS"
+                        android:id="@+id/Ajuste"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:tag="0"
+                        android:text="Ajuste"
                         android:icon="@mipmap/ic_ajustes"
                         app:tabTextColor="@color/black"/>
 
                     <com.google.android.material.tabs.TabItem
-                        android:id="@+id/ESTADOS"
+                        android:id="@+id/Historial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:tag="1"
+                        android:text="Historial"
                         android:icon="@mipmap/ic_ajustes"
                         app:tabTextColor="@color/black"/>
 
                     <com.google.android.material.tabs.TabItem
-                        android:id="@+id/LLAMADAS"
+                        android:id="@+id/Control"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:tag="2"
-                        android:text="LLAMADAS"
+                        android:text="Control"
+                        android:icon="@mipmap/ic_ajustes"
                         app:tabTextColor="@color/black"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/Perfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="3"
+                        android:text="Perfil"
+                        android:icon="@mipmap/ic_ajustes"
+                        app:tabTextColor="@color/black"/>
+
                 </com.google.android.material.tabs.TabLayout>
 
             </androidx.viewpager.widget.ViewPager>
 
         </LinearLayout>
-    </RelativeLayout>
+</RelativeLayout>
 
-</FrameLayout>
