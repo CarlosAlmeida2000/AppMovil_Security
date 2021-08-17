@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class Login extends AppCompatActivity {
@@ -15,7 +16,11 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
     public void login(View view){
-        Intent newActivity = new Intent(this, MainActivity.class);
-        startActivity(newActivity);
+        try{
+            Intent newActivity = new Intent(Login.this, MainActivity.class);
+            startActivity(newActivity);
+        }catch (Exception ex){
+            Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 }

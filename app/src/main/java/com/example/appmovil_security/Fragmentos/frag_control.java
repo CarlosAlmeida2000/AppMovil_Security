@@ -12,10 +12,10 @@ import com.example.appmovil_security.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Control#newInstance} factory method to
+ * Use the {@link frag_control#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Control extends Fragment {
+public class frag_control extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class Control extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Control() {
+    public frag_control() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class Control extends Fragment {
      * @return A new instance of fragment Control.
      */
     // TODO: Rename and change types and number of parameters
-    public static Control newInstance(String param1, String param2) {
-        Control fragment = new Control();
+    public static frag_control newInstance(String param1, String param2) {
+        frag_control fragment = new frag_control();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

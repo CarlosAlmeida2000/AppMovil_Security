@@ -12,10 +12,10 @@ import com.example.appmovil_security.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Ajustes#newInstance} factory method to
+ * Use the {@link frag_ajustes#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Ajustes extends Fragment {
+public class frag_ajustes extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class Ajustes extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Ajustes() {
+    public frag_ajustes() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class Ajustes extends Fragment {
      * @return A new instance of fragment Ajustes.
      */
     // TODO: Rename and change types and number of parameters
-    public static Ajustes newInstance(String param1, String param2) {
-        Ajustes fragment = new Ajustes();
+    public static frag_ajustes newInstance(String param1, String param2) {
+        frag_ajustes fragment = new frag_ajustes();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
