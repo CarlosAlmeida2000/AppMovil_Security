@@ -62,7 +62,7 @@ public class WebService extends AsyncTask<String, Long, String> {
         progDailog.setIndeterminate(false);
         progDailog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progDailog.setCancelable(true);
-        progDailog.show();
+        //progDailog.show();
     }
     @Override
     protected String doInBackground(String... params) {
@@ -73,9 +73,9 @@ public class WebService extends AsyncTask<String, Long, String> {
             {
                 h.header(params[k],params[k+1]);
             }
-
+            h.header("Content-Type", "application/json; charset=utf-8");
+            h.header("Accept", "application/json; charset=utf-8");
             String r=  h.form(this.datos).body();
-
             return r;
 
         } catch (HttpRequestException exception) {

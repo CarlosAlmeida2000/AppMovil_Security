@@ -11,59 +11,55 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tbMenuPrincipal"
-        android:layout_width="420dp"
+        android:layout_width="380dp"
         android:layout_height="69dp"
-        android:background="@color/white"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/Ajuste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@mipmap/ic_ajustes"
-            android:tag="0"
-            android:text="Ajuste"
-            app:tabTextColor="@color/black" />
+            android:icon="@drawable/ic_ajustes_foreground"
+            android:tag="0" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/Historial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@mipmap/ic_ajustes"
-            android:tag="1"
-            android:text="Historial"
-            app:tabTextColor="@color/black" />
+            android:icon="@drawable/ic_historial_foreground"
+            android:tag="1" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/Control"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@mipmap/ic_ajustes"
-            android:tag="2"
-            android:text="Control"
-            app:tabTextColor="@color/black" />
+            android:icon="@drawable/ic_ver_tiempo_real_foreground"
+            android:tag="2" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/Perfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@mipmap/ic_ajustes"
-            android:tag="3"
-            android:text="Perfil"
-            app:tabTextColor="@color/black" />
+            android:icon="@drawable/ic_perfil_foreground"
+            android:tag="3" />
 
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="406dp"
-        android:layout_height="534dp"
-        android:layout_marginBottom="76dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="528dp"
+        app:layout_constraintBottom_toTopOf="@+id/tbMenuPrincipal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></androidx.viewpager.widget.ViewPager>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"></androidx.viewpager.widget.ViewPager>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

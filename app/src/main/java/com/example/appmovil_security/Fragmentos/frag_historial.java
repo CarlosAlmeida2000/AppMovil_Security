@@ -88,7 +88,6 @@ public class frag_historial extends Fragment implements Asynchtask {
 
     @Override
     public void processFinish(String result) throws JSONException {
-        System.out.println(result);
         JSONObject json_data = new JSONObject(result);
         JSONArray json_historial = json_data.getJSONArray("historial");
         for(int i = 0; i < json_historial.length(); i++){

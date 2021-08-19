@@ -9,17 +9,12 @@
         android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="410dp"
-        android:layout_height="108dp"
-        android:background="#DDEAEC"
-        android:text="HISTORIAL" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/contenedor"
-        android:layout_width="414dp"
-        android:layout_height="433dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="410dp"
+        android:layout_height="289dp"
+        android:background="#E8F8F6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -27,10 +22,84 @@
 
         <com.mindorks.placeholderview.PlaceHolderView
             android:id="@+id/phv_historial"
-            android:layout_width="match_parent"
-            android:layout_height="371dp"
+            android:layout_width="410dp"
+            android:layout_height="289dp"
             android:scrollbars="vertical" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <EditText
+        android:id="@+id/dtmFechaDesde"
+        android:layout_width="128dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="90dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@+id/lblFecha_desde"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblFecha_desde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="88dp"
+        android:text="Fecha desde:"
+        android:textSize="28px"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblHistorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Historial"
+        android:textColor="@color/azul"
+        android:textSize="35px"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblFecha_hasta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="136dp"
+        android:text="Fecha hasta:"
+        android:textSize="28px"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dtmFechaHasta"
+        android:layout_width="128dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="135dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@+id/lblFecha_hasta"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBuscarHistorial"
+        android:layout_width="188dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:drawableRight="@drawable/ic_buscar"
+        android:text="Buscar"
+        android:textSize="24px"
+        app:layout_constraintBottom_toTopOf="@+id/contenedor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dtmFechaHasta"
+        app:layout_constraintVertical_bias="0.285" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
