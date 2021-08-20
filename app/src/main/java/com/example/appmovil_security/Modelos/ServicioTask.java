@@ -42,6 +42,13 @@ public class ServicioTask extends AsyncTask<String, Long, String> {
         this.callback = callback;
     }
 
+    public ServicioTask(Context ctx, String metodo_request, String link_api, Asynchtask callback){
+        this.httpContext = ctx;
+        this.metodo_request = metodo_request;
+        this.link_api = link_api;
+        this.callback = callback;
+    }
+
    /* @Override
     protected String doInBackground(String... strings) {
         return null;

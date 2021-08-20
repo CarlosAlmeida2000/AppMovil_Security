@@ -23,7 +23,7 @@
         android:id="@+id/lblInicioSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="325dp"
         android:text="Inicio de sesión"
         android:textColor="@color/azul"
         android:textSize="45px"
@@ -57,7 +57,7 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="410dp"
+        android:layout_width="match_parent"
         android:layout_height="275dp"
         app:layout_constraintBottom_toTopOf="@+id/lblInicioSesion"
         app:layout_constraintEnd_toEndOf="parent"
