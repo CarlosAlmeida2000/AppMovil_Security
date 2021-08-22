@@ -8,7 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="azul">#0A2B55</color>
-    <color name="gris">#EBEBEB</color>
+    <color name="gris">#BEEBEBEB</color>
     <color name="celeste">#F4F6F8</color>
+    <color name="celeste_agua">#D3E7FA</color>
     <color name="celeste_fuerte">#70ACF9</color>
+    <color name="color_letra">#1155AB</color>
 </resources>

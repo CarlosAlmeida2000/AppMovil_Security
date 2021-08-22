@@ -79,15 +79,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnVerEvidencias"
-        android:layout_width="148dp"
+      <LinearLayout
+        android:id="@+id/contenedor_button"
+        android:layout_width="150dp"
         android:layout_height="39dp"
-        android:layout_marginLeft="210dp"
-        android:layout_marginTop="-25dp"
-        android:drawableRight="@drawable/ic_vista"
-        android:text="Capturas"
+        android:layout_marginLeft="204dp"
+        android:layout_marginTop="-26dp"
+        android:background="@drawable/btn_tercero"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtClave"
+        app:layout_constraintVertical_bias="0.483">
+
+          <Button
+              android:id="@+id/btnVerEvidencias"
+              style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+              android:layout_width="150dp"
+              android:layout_height="40dp"
+              android:layout_marginStart="-7dp"
+              android:layout_marginTop="-11dp"
+              android:backgroundTint="@color/purple_200"
+              android:drawableRight="@drawable/ic_vista"
+              android:onClick="login"
+              android:text="Capturas"
+              android:textAlignment="center"
+              android:textColor="@color/white" />
+    </LinearLayout>
 </LinearLayout>
 

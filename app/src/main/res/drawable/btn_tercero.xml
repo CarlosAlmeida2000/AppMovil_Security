@@ -5,14 +5,8 @@
 
     <!-- Color de fondo de la vista -->
     <solid
-        android:color="@color/celeste" >
+        android:color="@color/purple_200" >
     </solid>
-
-    <!-- Color y ancho del borde del elemento -->
-    <stroke
-        android:width="3dp"
-        android:color="@color/celeste_fuerte" >
-    </stroke>
 
     <!-- Si queremos añadir algún padding -->
     <padding
@@ -24,7 +18,7 @@
 
     <!-- Aquí indicamos el radio a aplicar a las esquinas -->
     <corners
-        android:radius="34dp"   >
+        android:radius="27dp"   >
     </corners>
 
 </shape>

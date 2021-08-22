@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contenedor"
+    android:layout_width="380dp"
+    android:layout_height="80dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="15dp"
+    android:background="@drawable/bordes_contenedor"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0">
+
+    <TextView
+        android:id="@+id/txtComponente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Name"
+        android:textColor="#1E1E1E"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblSector"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:text="Sector:"
+        android:textColor="#1E1E1E"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="-18dp"
+        android:text="Parte frontal"
+        android:textColor="#1E1E1E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/sw_componente"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="-28dp" />
+
+
+</LinearLayout>
+

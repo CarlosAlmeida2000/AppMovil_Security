@@ -4,19 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gris"
     tools:context=".Login">
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="#0A2B55"
-        android:onClick="login"
-        android:text="Ingresar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtClave" />
 
     <TextView
         android:id="@+id/lblInicioSesion"
@@ -25,7 +14,7 @@
         android:layout_marginTop="325dp"
         android:text="Inicio de sesión"
         android:textColor="@color/azul"
-        android:textSize="45px"
+        android:textSize="48px"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -36,9 +25,11 @@
         android:id="@+id/txtUsuario"
         android:layout_width="327dp"
         android:layout_height="46dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/azul"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_usuario"
         android:ems="10"
+        android:hint="Ingrese su usuario"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,9 +39,11 @@
         android:id="@+id/txtClave"
         android:layout_width="327dp"
         android:layout_height="46dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/azul"
+        android:layout_marginTop="18dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_clave"
         android:ems="10"
+        android:hint="Ingrese su clave"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,10 +53,37 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="278dp"
+        android:layout_marginTop="-8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/otwarcie_inteligentny_dom" />
+
+    <LinearLayout
+        android:id="@+id/contenedor_button"
+        android:layout_width="109dp"
+        android:layout_height="47dp"
+        android:background="@drawable/btn_primary"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtClave"
+        app:layout_constraintVertical_bias="0.483">
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+            android:layout_width="109dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="-7dp"
+            android:layout_marginTop="-9dp"
+            android:backgroundTint="@color/azul"
+            android:onClick="login"
+            android:text="Ingresar"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
