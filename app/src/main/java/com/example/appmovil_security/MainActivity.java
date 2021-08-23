@@ -3,11 +3,8 @@ package com.example.appmovil_security;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import com.example.appmovil_security.Adaptadores.PagerController;
-import com.example.appmovil_security.Modelos.ServicioTask;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener{

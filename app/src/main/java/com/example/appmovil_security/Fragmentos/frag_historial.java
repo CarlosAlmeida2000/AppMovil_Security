@@ -14,10 +14,10 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.appmovil_security.Modelos.Asynchtask;
 import com.example.appmovil_security.Modelos.Historial;
-import com.example.appmovil_security.Modelos.ServicioTask;
 import com.example.appmovil_security.R;
+import com.example.appmovil_security.WebServices.Asynchtask;
+import com.example.appmovil_security.WebServices.ServicioTask;
 import com.mindorks.placeholderview.PlaceHolderView;
 import com.mindorks.placeholderview.SmoothLinearLayoutManager;
 
@@ -27,9 +27,6 @@ import org.json.JSONObject;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Date;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -185,5 +182,4 @@ public class frag_historial extends Fragment implements Asynchtask {
             Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
-
 }

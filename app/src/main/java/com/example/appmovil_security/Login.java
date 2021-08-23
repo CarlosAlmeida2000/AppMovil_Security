@@ -4,14 +4,13 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.appmovil_security.Modelos.Asynchtask;
-import com.example.appmovil_security.Modelos.ServicioTask;
+import com.example.appmovil_security.WebServices.Asynchtask;
+import com.example.appmovil_security.WebServices.ServicioTask;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -56,15 +55,14 @@ public class Login extends AppCompatActivity implements Asynchtask {
     public void processFinish(String result) throws JSONException {
         try {
             JSONObject json_response = new JSONObject(result);
+            progDailog.dismiss();
             if(json_response.has("usuario")){
                 Intent newActivity = new Intent(Login.this, MainActivity.class);
                 JSONArray json_array = json_response.getJSONArray("usuario");
                 JSONObject usuario = json_array.getJSONObject(0);
-                progDailog.dismiss();
                 Toast.makeText(this, "Bienvenido (a) " + usuario.get("nombre").toString(), Toast.LENGTH_LONG).show();
                 startActivity(newActivity);
             }else{
-                progDailog.dismiss();
                 Toast.makeText(this, json_response.get("mensaje").toString(), Toast.LENGTH_LONG).show();
             }
         }catch (Exception ex){

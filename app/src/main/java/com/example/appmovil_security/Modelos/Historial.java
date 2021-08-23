@@ -3,6 +3,7 @@ package com.example.appmovil_security.Modelos;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.appmovil_security.R;
 import com.mindorks.placeholderview.annotations.Click;
@@ -18,6 +19,9 @@ import org.w3c.dom.Text;
 @NonReusable
 @Layout(R.layout.historial)
 public class Historial {
+
+    int historial_id;
+
     @View(R.id.txtComponente)
     TextView componente;
 
@@ -39,6 +43,7 @@ public class Historial {
     @Resolve
     protected void onResolved(){
         try{
+            this.historial_id = this.unHistorial.getInt("historial_id");
             this.componente.setText(this.unHistorial.getString("componente_nombre"));
             this.sector.setText(this.unHistorial.getString("sector"));
             this.fecha.setText(this.unHistorial.getString("fecha"));
@@ -49,7 +54,7 @@ public class Historial {
 
     @Click(R.id.btnVerEvidencias)
     public void onClick_VerEvidencias(){
-
+        Toast.makeText(contexto, "desde el boton", Toast.LENGTH_LONG).show();
     }
 
 }

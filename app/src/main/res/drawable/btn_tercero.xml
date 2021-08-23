@@ -5,7 +5,7 @@
 
     <!-- Color de fondo de la vista -->
     <solid
-        android:color="@color/purple_200" >
+        android:color="@color/teal_200" >
     </solid>
 
     <!-- Si queremos añadir algún padding -->
