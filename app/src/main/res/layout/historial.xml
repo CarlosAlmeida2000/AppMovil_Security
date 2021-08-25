@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/body_sistema"
-    android:layout_width="380dp"
+    android:layout_width="353dp"
     android:layout_height="110dp"
     android:layout_marginStart="15dp"
     android:layout_marginTop="4dp"
@@ -31,11 +32,11 @@
 
     <TextView
         android:id="@+id/lblSector"
-        android:layout_width="66dp"
-        android:layout_height="wrap_content"
+        android:layout_width="54dp"
+        android:layout_height="18dp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
         android:text="Sector:"
         android:textColor="#1E1E1E"
         android:textStyle="bold"
@@ -47,8 +48,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="-18dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="32dp"
         android:text="Parte frontal"
         android:textColor="#1E1E1E"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,8 +60,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
         android:text="Fecha:"
         android:textColor="#1E1E1E"
         android:textStyle="bold"
@@ -72,40 +73,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="-18dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="60dp"
         android:text="16/08/2021"
         android:textColor="#1E1E1E"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-      <LinearLayout
+    <LinearLayout
         android:id="@+id/contenedor_button"
-        android:layout_width="150dp"
-        android:layout_height="39dp"
+        android:layout_width="158dp"
+        android:layout_height="38dp"
         android:layout_marginLeft="204dp"
         android:layout_marginTop="-26dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/btn_tercero"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtClave"
         app:layout_constraintVertical_bias="0.483">
 
-          <Button
-              android:id="@+id/btnVerEvidencias"
-              style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-              android:layout_width="150dp"
-              android:layout_height="40dp"
-              android:layout_marginStart="-7dp"
-              android:layout_marginTop="-11dp"
-              android:backgroundTint="@color/teal_200"
-              android:drawableRight="@drawable/ic_vista"
-              android:onClick="login"
-              android:text="Capturas"
-              android:textAlignment="center"
-              android:textColor="@color/white" />
+        <Button
+            android:id="@+id/btnVerEvidencias"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+            android:layout_width="173dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="-7dp"
+            android:layout_marginTop="-11dp"
+            android:backgroundTint="@color/teal_200"
+            android:drawableRight="@drawable/ic_vista"
+            android:onClick="login"
+            android:text="Capturas"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
     </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 

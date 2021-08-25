@@ -51,18 +51,17 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="278dp"
-        android:layout_marginTop="-8dp"
+        android:layout_width="426dp"
+        android:layout_height="282dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/otwarcie_inteligentny_dom" />
 
     <LinearLayout
         android:id="@+id/contenedor_button"
-        android:layout_width="109dp"
+        android:layout_width="132dp"
         android:layout_height="47dp"
         android:background="@drawable/btn_primary"
         android:orientation="vertical"
@@ -75,7 +74,7 @@
         <Button
             android:id="@+id/btnLogin"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-            android:layout_width="109dp"
+            android:layout_width="132dp"
             android:layout_height="47dp"
             android:layout_marginStart="-7dp"
             android:layout_marginTop="-9dp"
@@ -83,7 +82,7 @@
             android:onClick="login"
             android:text="Ingresar"
             android:textAlignment="center"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
