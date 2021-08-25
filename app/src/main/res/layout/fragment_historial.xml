@@ -15,7 +15,6 @@
         android:id="@+id/body_sistema"
         android:layout_width="388dp"
         android:layout_height="412dp"
-        android:background="@color/white"
         android:clickable="false"
         android:clipChildren="false"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -4,10 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/body_sistema"
-    android:layout_width="353dp"
-    android:layout_height="80dp"
-    android:layout_marginStart="15dp"
-    android:layout_marginTop="4dp"
+    android:layout_width="323dp"
+    android:layout_height="280dp"
+    android:layout_marginStart="17dp"
+    android:layout_marginTop="8dp"
     android:layout_marginEnd="15dp"
     android:background="@drawable/bordes_contenedor"
     android:orientation="vertical"
@@ -24,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:text="Name"
+        android:text="Evidencia #"
         android:textColor="#1E1E1E"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,19 +37,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
-        android:text="Sector:"
+        android:text="Hora:"
         android:textColor="#1E1E1E"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Switch
-        android:id="@+id/sw_componente"
-        android:layout_width="65dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -57,12 +48,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="32dp"
-        android:text="Parte frontal"
+        android:text="08:50"
         android:textColor="#1E1E1E"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgEvidencia"
+        android:layout_width="282dp"
+        android:layout_height="190dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.822"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

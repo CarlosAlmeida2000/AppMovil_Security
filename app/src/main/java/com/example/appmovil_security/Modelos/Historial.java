@@ -2,9 +2,11 @@ package com.example.appmovil_security.Modelos;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.appmovil_security.ver_evidencias;
 import com.example.appmovil_security.R;
 import com.mindorks.placeholderview.annotations.Click;
 import com.mindorks.placeholderview.annotations.Layout;
@@ -12,9 +14,9 @@ import com.mindorks.placeholderview.annotations.NonReusable;
 import com.mindorks.placeholderview.annotations.Resolve;
 import com.mindorks.placeholderview.annotations.View;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 @NonReusable
 @Layout(R.layout.historial)
@@ -22,10 +24,10 @@ public class Historial {
 
     int historial_id;
 
-    @View(R.id.txtComponente)
+    @View(R.id.txtNumEvidencia)
     TextView componente;
 
-    @View(R.id.txtSector)
+    @View(R.id.txtHoraEvi)
     TextView sector;
 
     @View(R.id.txtFecha)
@@ -34,6 +36,7 @@ public class Historial {
     Context contexto;
     JSONObject unHistorial;
     Intent changeActivity;
+    Bundle b;
 
     public Historial(Context contexto, JSONObject unHistorial) {
         this.contexto = contexto;
@@ -53,8 +56,20 @@ public class Historial {
     }
 
     @Click(R.id.btnVerEvidencias)
-    public void onClick_VerEvidencias(){
+    public void onClick_VerEvidencias() {
         Toast.makeText(contexto, "desde el boton", Toast.LENGTH_LONG).show();
+        try {
+            changeActivity = new Intent(this.contexto, ver_evidencias.class);
+            changeActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            b = new Bundle();
+            b.putString("jsonArray", this.unHistorial.getJSONArray("evidencias").toString());
+            changeActivity.putExtras(b);
+            contexto.startActivity(changeActivity);
+        } catch (JSONException e) {
+            Toast.makeText(contexto, e.getMessage(), Toast.LENGTH_LONG).show();
+        }
     }
-
 }
+
+
+

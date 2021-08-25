@@ -6,9 +6,6 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.media.AudioAttributesCompat;
-
-import com.example.appmovil_security.Fragmentos.frag_ajustes;
 import com.example.appmovil_security.R;
 import com.example.appmovil_security.WebServices.Asynchtask;
 import com.example.appmovil_security.WebServices.ServicioTask;
@@ -27,10 +24,10 @@ public class Componente implements Asynchtask {
 
     int componente_id;
 
-    @View(R.id.txtComponente)
+    @View(R.id.txtNumEvidencia)
     TextView componente;
 
-    @View(R.id.txtSector)
+    @View(R.id.txtHoraEvi)
     TextView sector;
 
     @View(R.id.sw_componente)

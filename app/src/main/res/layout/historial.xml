@@ -18,7 +18,7 @@
     app:layout_constraintVertical_bias="1.0">
 
     <TextView
-        android:id="@+id/txtComponente"
+        android:id="@+id/txtNumEvidencia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/lblSector"
+        android:id="@+id/lblHoraEvi"
         android:layout_width="54dp"
         android:layout_height="18dp"
         android:layout_alignParentTop="true"
@@ -44,11 +44,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtSector"
+        android:id="@+id/txtHoraEvi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="62dp"
         android:layout_marginTop="32dp"
         android:text="Parte frontal"
         android:textColor="#1E1E1E"
@@ -84,9 +84,10 @@
         android:id="@+id/contenedor_button"
         android:layout_width="158dp"
         android:layout_height="38dp"
-        android:layout_marginLeft="204dp"
-        android:layout_marginTop="-26dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="-6dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/btn_tercero"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -94,14 +95,14 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtClave"
-        app:layout_constraintVertical_bias="0.483">
+        app:layout_constraintVertical_bias="0.58000004">
 
         <Button
             android:id="@+id/btnVerEvidencias"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
             android:layout_width="173dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="-7dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="-12dp"
             android:layout_marginTop="-11dp"
             android:backgroundTint="@color/teal_200"
             android:drawableRight="@drawable/ic_vista"
