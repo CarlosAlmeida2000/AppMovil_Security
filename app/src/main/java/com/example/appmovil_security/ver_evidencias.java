@@ -31,7 +31,7 @@ public class ver_evidencias extends AppCompatActivity {
             JSONArray evidencias = new JSONArray(b.getString("jsonArray"));
             for(int i = 0; i < evidencias.length(); i++){
                 JSONObject una_evidencia = evidencias.getJSONObject(i);
-                phv_evidencias.addView(new Evidencia(getApplicationContext(), una_evidencia));
+                phv_evidencias.addView(new Evidencia(getApplicationContext(), una_evidencia, (i+1)));
             }
         } catch (JSONException e) {
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();

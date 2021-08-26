@@ -57,7 +57,6 @@ public class Historial {
 
     @Click(R.id.btnVerEvidencias)
     public void onClick_VerEvidencias() {
-        Toast.makeText(contexto, "desde el boton", Toast.LENGTH_LONG).show();
         try {
             changeActivity = new Intent(this.contexto, ver_evidencias.class);
             changeActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

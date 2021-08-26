@@ -31,7 +31,7 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <TextView
-        android:id="@+id/lblHistorial"
+        android:id="@+id/lblPerfil"
         android:layout_width="376dp"
         android:layout_height="24dp"
         android:layout_marginTop="20dp"
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblHistorial"
+        app:layout_constraintTop_toBottomOf="@+id/lblPerfil"
         app:layout_constraintVertical_bias="0.388">
 
 
@@ -73,7 +73,7 @@
             android:singleLine="true"
             android:textSize="35px"
             app:layout_constraintStart_toEndOf="@+id/lblFecha_desde"
-            app:layout_constraintTop_toBottomOf="@+id/lblHistorial" />
+            app:layout_constraintTop_toBottomOf="@+id/lblPerfil" />
 
         <TextView
             android:id="@+id/lblFecha_hasta"
@@ -99,7 +99,7 @@
             android:textSize="35px"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lblHistorial" />
+            app:layout_constraintTop_toBottomOf="@+id/lblPerfil" />
 
         <EditText
             android:id="@+id/dtmFechaHasta"

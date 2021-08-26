@@ -1,14 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gris"
+    android:orientation="vertical"
     tools:context=".Fragmentos.frag_perfil">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="PERFIL" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/lblPerfil"
+        android:layout_width="376dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:text="Perfil de usuario"
+        android:textAlignment="center"
+        android:textColor="@color/color_letra"
+        android:textSize="45px"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/contenedor_encabezado"
+        android:layout_width="352dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+
+        android:layout_marginEnd="22dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPerfil">
+
+
+        <EditText
+            android:id="@+id/dtmFechaDesde"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="2dp"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="date"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textSize="35px"
+            app:layout_constraintStart_toEndOf="@+id/lblFecha_desde"
+            app:layout_constraintTop_toBottomOf="@+id/lblPerfil" />
+
+        <TextView
+            android:id="@+id/lblFecha_hasta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="20dp"
+            android:text="Fecha hasta:"
+            android:textColor="@color/azul"
+            android:textSize="35px"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblFecha_desde" />
+
+        <TextView
+            android:id="@+id/lblFecha_desde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="-58dp"
+            android:text="Fecha desde:"
+            android:textColor="@color/azul"
+            android:textSize="35px"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblPerfil" />
+
+        <EditText
+            android:id="@+id/dtmFechaHasta"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="date"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textSize="35px"
+            app:layout_constraintStart_toEndOf="@+id/lblFecha_hasta"
+            app:layout_constraintTop_toBottomOf="@+id/dtmFechaDesde" />
+
+        <LinearLayout
+            android:id="@+id/contenedor_button"
+            android:layout_width="129dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="-50dp"
+            android:background="@drawable/btn_secundary"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtClave"
+            app:layout_constraintVertical_bias="0.483">
+
+            <Button
+                android:id="@+id/btnBuscarHistorial"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                android:layout_width="129dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="-7dp"
+                android:layout_marginTop="-10dp"
+                android:backgroundTint="@color/celeste_fuerte"
+                android:drawableRight="@drawable/ic_buscar"
+                android:text="Buscar"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

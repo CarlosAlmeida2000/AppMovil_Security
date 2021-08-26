@@ -21,6 +21,9 @@ import org.json.JSONObject;
 @Layout(R.layout.evidencia)
 public class Evidencia {
 
+    @View(R.id.txtNumEvidencia)
+    TextView txtnumEvidencia;
+
     @View(R.id.txtHoraEvi)
     TextView hora;
 
@@ -28,24 +31,26 @@ public class Evidencia {
     ImageView imagen;
 
     Context contexto;
+    int numEvidencia;
     JSONObject unaEvidencia;
     String base64Image;
     byte[] decodedString;
     Bitmap decodedByte;
+    DecoderImagen decoder;
 
-    public Evidencia(Context contexto, JSONObject unaEvidencia) {
+    public Evidencia(Context contexto, JSONObject unaEvidencia, int numEvidencia) {
         this.contexto = contexto;
         this.unaEvidencia = unaEvidencia;
+        this.numEvidencia = numEvidencia;
     }
 
     @Resolve
     protected void onResolved(){
         try{
+            this.txtnumEvidencia.setText("Evidencia # " + numEvidencia);
             this.hora.setText(unaEvidencia.getString("hora"));
-            base64Image = unaEvidencia.getString("foto").split(",")[1];
-            decodedString = Base64.decode(base64Image, Base64.DEFAULT);
-            decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-            this.imagen.setImageBitmap(decodedByte);
+            decoder = new DecoderImagen(unaEvidencia.getString("foto"));
+            this.imagen.setImageBitmap(decoder.getImagen());
         }catch (JSONException ex){
             Toast.makeText(contexto, ex.getMessage(), Toast.LENGTH_LONG).show();
         }
