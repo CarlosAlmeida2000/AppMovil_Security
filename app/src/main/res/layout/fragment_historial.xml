@@ -138,7 +138,7 @@
                 android:layout_marginStart="-7dp"
                 android:layout_marginTop="-10dp"
                 android:backgroundTint="@color/celeste_fuerte"
-                android:drawableRight="@drawable/ic_buscar"
+                android:drawableLeft="@drawable/ic_buscar"
                 android:text="Buscar"
                 android:textAlignment="center"
                 android:textColor="@color/white" />

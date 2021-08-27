@@ -34,10 +34,8 @@ public class Login extends AppCompatActivity implements Asynchtask {
     public void login(View view) {
         try {
             JSONObject json_mensaje = new JSONObject();
-            //json_mensaje.put("usuario", txtUsuario.getText());
-            //json_mensaje.put("clave", txtClave.getText());
-            json_mensaje.put("usuario", "calmeidad");
-            json_mensaje.put("clave", "carlos123456");
+            json_mensaje.put("usuario", txtUsuario.getText());
+            json_mensaje.put("clave", txtClave.getText());
             ServicioTask servicioTask = new ServicioTask(this, "POST","https://wssecurity.herokuapp.com/api-usuario/login/", json_mensaje.toString(), this);
             servicioTask.execute();
             progDailog = new ProgressDialog(this);

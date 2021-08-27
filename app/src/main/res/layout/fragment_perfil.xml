@@ -15,7 +15,7 @@
         android:id="@+id/lblPerfil"
         android:layout_width="376dp"
         android:layout_height="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text="Perfil de usuario"
         android:textAlignment="center"
         android:textColor="@color/color_letra"
@@ -28,9 +28,9 @@
     <LinearLayout
         android:id="@+id/contenedor_encabezado"
         android:layout_width="352dp"
-        android:layout_height="86dp"
+        android:layout_height="555dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
 
         android:layout_marginEnd="22dp"
         android:orientation="vertical"
@@ -39,71 +39,115 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblPerfil">
 
-
-        <EditText
-            android:id="@+id/dtmFechaDesde"
-            android:layout_width="120dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="90dp"
-            android:layout_marginTop="2dp"
-            android:ems="10"
-            android:focusable="false"
-            android:inputType="date"
-            android:selectAllOnFocus="true"
-            android:singleLine="true"
-            android:textSize="35px"
-            app:layout_constraintStart_toEndOf="@+id/lblFecha_desde"
-            app:layout_constraintTop_toBottomOf="@+id/lblPerfil" />
+        <ImageView
+            android:id="@+id/imgPerfil"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginBottom="4dp" />
 
         <TextView
-            android:id="@+id/lblFecha_hasta"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="20dp"
-            android:text="Fecha hasta:"
+            android:layout_marginBottom="4dp"
+            android:text="Nombres"
             android:textColor="@color/azul"
-            android:textSize="35px"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lblFecha_desde" />
-
-        <TextView
-            android:id="@+id/lblFecha_desde"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="-58dp"
-            android:text="Fecha desde:"
-            android:textColor="@color/azul"
-            android:textSize="35px"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lblPerfil" />
+            android:textSize="42px" />
 
         <EditText
-            android:id="@+id/dtmFechaHasta"
-            android:layout_width="120dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="90dp"
-            android:layout_marginTop="8dp"
+            android:id="@+id/txtNombresP"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
             android:ems="10"
-            android:focusable="false"
-            android:inputType="date"
-            android:selectAllOnFocus="true"
-            android:singleLine="true"
-            android:textSize="35px"
-            app:layout_constraintStart_toEndOf="@+id/lblFecha_hasta"
-            app:layout_constraintTop_toBottomOf="@+id/dtmFechaDesde" />
+            android:hint="Ingrese sus nombres"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Usuario"
+            android:textColor="@color/azul"
+            android:textSize="42px" />
+
+        <EditText
+            android:id="@+id/txtUsuarioP"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Ingrese su usuario"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Clave actual"
+            android:textColor="@color/azul"
+            android:textSize="42px" />
+
+        <EditText
+            android:id="@+id/txtClaveActual"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Ingrese su clave actual"
+            android:inputType="textPersonName|textPassword" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Nueva clave"
+            android:textColor="@color/azul"
+            android:textSize="42px" />
+
+        <EditText
+            android:id="@+id/txtNuevaClave"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Ingrese su nueva clave"
+            android:inputType="textPersonName|textPassword" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Confirme su clave"
+            android:textColor="@color/azul"
+            android:textSize="42px" />
+
+        <EditText
+            android:id="@+id/txtConfiClave"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="7dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Confirme su clave"
+            android:inputType="textPersonName|textPassword" />
 
         <LinearLayout
             android:id="@+id/contenedor_button"
-            android:layout_width="129dp"
-            android:layout_height="39dp"
-            android:layout_marginLeft="220dp"
-            android:layout_marginTop="-50dp"
-            android:background="@drawable/btn_secundary"
+            android:layout_width="142dp"
+            android:layout_height="47dp"
+            android:background="@drawable/btn_save"
             android:orientation="vertical"
+            android:layout_marginStart="108dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -111,15 +155,15 @@
             app:layout_constraintVertical_bias="0.483">
 
             <Button
-                android:id="@+id/btnBuscarHistorial"
+                android:id="@+id/btnGuardarPerfil"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-                android:layout_width="129dp"
-                android:layout_height="40dp"
+                android:layout_width="142dp"
+                android:layout_height="47dp"
                 android:layout_marginStart="-7dp"
-                android:layout_marginTop="-10dp"
-                android:backgroundTint="@color/celeste_fuerte"
-                android:drawableRight="@drawable/ic_buscar"
-                android:text="Buscar"
+                android:layout_marginTop="-9dp"
+                android:backgroundTint="@color/teal_200"
+                android:text="Guardar"
+                android:drawableLeft="@drawable/ic_save"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
         </LinearLayout>
