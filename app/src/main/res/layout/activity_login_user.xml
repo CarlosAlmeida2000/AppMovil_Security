@@ -57,7 +57,7 @@
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/otwarcie_inteligentny_dom" />
+        app:srcCompat="@drawable/fondo" />
 
     <LinearLayout
         android:id="@+id/contenedor_button"
