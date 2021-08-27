@@ -40,6 +40,15 @@ public class frag_perfil extends Fragment implements Asynchtask {
     private String link_api;
     private ProgressDialog progDailog;
     private JSONObject json_data;
+    private TextView txtNombres;
+    private TextView txtUsuario;
+    private TextView txtClaveActual;
+    private TextView txtNuevaClave;
+    private TextView txtConfiClave;
+    private ImageView imgPerfil;
+    private Button btnGuardar;
+    private JSONObject usuario;
+    private DecoderImagen decoder;
 
     public frag_perfil() {
         // Required empty public constructor
@@ -76,56 +85,89 @@ public class frag_perfil extends Fragment implements Asynchtask {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_perfil, container, false);
-        TextView txtNombres = rootView.findViewById(R.id.txtNombresP);
-        TextView txtUsuario = rootView.findViewById(R.id.txtUsuarioP);
-        TextView txtClaveActual = rootView.findViewById(R.id.txtClaveActual);
-        TextView txtNuevaClave = rootView.findViewById(R.id.txtNuevaClave);
-        TextView txtConfiClave = rootView.findViewById(R.id.txtConfiClave);
-        ImageView imgPerfil = rootView.findViewById(R.id.imgPerfil);
-        Button btnGuardar = rootView.findViewById(R.id.btnGuardarPerfil);
-        JSONObject usuario = Login.getUsuario();
+        txtNombres = rootView.findViewById(R.id.txtNombresP);
+        txtUsuario = rootView.findViewById(R.id.txtUsuarioP);
+        txtClaveActual = rootView.findViewById(R.id.txtClaveActual);
+        txtNuevaClave = rootView.findViewById(R.id.txtNuevaClave);
+        txtConfiClave = rootView.findViewById(R.id.txtConfiClave);
+        imgPerfil = rootView.findViewById(R.id.imgPerfil);
+        btnGuardar = rootView.findViewById(R.id.btnGuardarPerfil);
+        usuario = Login.getUsuario();
         try {
             txtNombres.setText(usuario.getString("nombre"));
             txtUsuario.setText(usuario.getString("usuario"));
-            DecoderImagen decoder = new DecoderImagen(usuario.getString("foto"));
+            decoder = new DecoderImagen(usuario.getString("foto"));
             imgPerfil.setImageBitmap(decoder.getImagen());
         } catch (JSONException e) {
-            e.printStackTrace();
+            Toast.makeText(getContext(), "Sucedió un error a extraer los datos del perfil", Toast.LENGTH_LONG).show();
         }
-
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 link_api = "https://wssecurity.herokuapp.com/api-usuario/usuario/";
                 json_data = new JSONObject();
                 try {
-                    if(txtNombres.getText().toString() != "" && txtUsuario.getText().toString() != "" && txtNuevaClave.getText().toString() != "" && txtConfiClave.getText().toString() != ""){
-                        if(txtNuevaClave.getText().equals(usuario.getString("clave"))){
-                            if(txtNuevaClave.getText().equals(txtConfiClave.getText())){
-                                json_data.put("usuario_id", usuario.getString("usuario_id"));
-                                json_data.put("nombre", txtNombres.getText().toString());
-                                json_data.put("usuario", txtUsuario.getText().toString());
-                                json_data.put("clave", txtNuevaClave.getText().toString());
-                                ServicioTask servicioTask = new ServicioTask(getContext(), "PUT", link_api, json_data.toString(), frag_perfil.this::processFinish);
-                                servicioTask.execute();
-                                showDialog();
+                    if(txtClaveActual.getText() != ""){
+                        if(txtClaveActual.getText().toString().equals(usuario.getString("clave"))){
+                            if(txtNombres.getText().toString() != "" && txtUsuario.getText().toString() != ""){
+
+                                if(txtNuevaClave.getText().toString() != ""){
+                                    if(txtConfiClave.getText().toString() != ""){
+                                        if(txtNuevaClave.getText().toString().equals(txtConfiClave.getText().toString())){
+                                            save_perfil();
+                                        }else{
+                                            Toast.makeText(getContext(), "Las claves no coinciden.", Toast.LENGTH_LONG).show();
+                                        }
+                                    }else{
+                                        Toast.makeText(getContext(), "Las claves no coinciden.", Toast.LENGTH_LONG).show();
+                                    }
+                                }else if(txtConfiClave.getText().toString() != ""){
+                                    if(txtNuevaClave.getText().toString() != ""){
+                                        if(txtNuevaClave.getText().toString().equals(txtConfiClave.getText().toString())){
+                                            save_perfil();
+                                        }else{
+                                            Toast.makeText(getContext(), "Las claves no coinciden.", Toast.LENGTH_LONG).show();
+                                        }
+                                    }else{
+                                        Toast.makeText(getContext(), "Las claves no coinciden.", Toast.LENGTH_LONG).show();
+                                    }
+                                }else{
+                                    save_perfil();
+                                }
+
                             }else{
-                                Toast.makeText(getContext(), "La nueva clave no coinciden con la clave confirmada.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext(), "Existen campos vacíos.", Toast.LENGTH_LONG).show();
                             }
                         }else{
                             Toast.makeText(getContext(), "La clave actual es incorrecta", Toast.LENGTH_LONG).show();
                         }
                     }else{
-                        Toast.makeText(getContext(), "Existen campos vacíos.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getContext(), "Se requiere ingresar la clave actual.", Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {
-                    Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Error al enviar los datos", Toast.LENGTH_LONG).show();
                 }
             }
         });
         return rootView;
     }
 
+    private void save_perfil(){
+        try {
+            json_data.put("usuario_id", usuario.getString("usuario_id"));
+            json_data.put("nombre", txtNombres.getText().toString());
+            json_data.put("usuario", txtUsuario.getText().toString());
+            if(txtNuevaClave.getText().toString() != ""){
+                json_data.put("clave", txtNuevaClave.getText().toString());
+            }
+            ServicioTask servicioTask = new ServicioTask(getContext(), "PUT", link_api, json_data.toString(), frag_perfil.this::processFinish);
+            servicioTask.execute();
+            showDialog();
+        } catch (JSONException e) {
+            Toast.makeText(getContext(), "Error al enviar los datos", Toast.LENGTH_LONG).show();
+        }
+    }
+//txtNuevaClave.getText().toString() != "" && txtConfiClave.getText().toString() != ""
     private void showDialog(){
         progDailog = new ProgressDialog(getContext());
         progDailog.setTitle("Procesando solicitud");
@@ -141,11 +183,14 @@ public class frag_perfil extends Fragment implements Asynchtask {
         json_data = new JSONObject(result);
         if(json_data.has("confirmacion")){
             if(json_data.getBoolean("confirmacion")){
+                progDailog.dismiss();
                 Toast.makeText(getContext(), "Perfil modificado.", Toast.LENGTH_LONG).show();
             }else{
+                progDailog.dismiss();
                 Toast.makeText(getContext(), "No se logró actualizar su perfil.", Toast.LENGTH_LONG).show();
             }
         }else{
+            progDailog.dismiss();
             Toast.makeText(getContext(), json_data.getString("mensaje"), Toast.LENGTH_LONG).show();
         }
     }

@@ -89,8 +89,8 @@ public class frag_control extends Fragment implements Asynchtask {
                 link_api = "https://wssecurity.herokuapp.com/api-seguridad/solicitud/";
                 json_data = new JSONObject();
                 try {
-                    json_data.put("usuario_id", Login.getUsuario().getInt("usuario_id"));
-                    ServicioTask servicioTask = new ServicioTask(getContext(), "POST", link_api, json_data.toString(), frag_control.this::processFinish);
+                    json_data.put("estado", true);
+                    ServicioTask servicioTask = new ServicioTask(getContext(), "PUT", link_api, json_data.toString(), frag_control.this::processFinish);
                     servicioTask.execute();
                     showDialog();
                 } catch (JSONException e) {
@@ -122,29 +122,28 @@ public class frag_control extends Fragment implements Asynchtask {
                 JSONObject unaEvidencia = jsonEvidencias.getJSONObject(0);
                 DecoderImagen decoder = new DecoderImagen(unaEvidencia.getString("foto"));
                 imgEstadoActual.setImageBitmap(decoder.getImagen());
-            } else {
-                if (json_data.has("solicitudes")) {
-                    JSONArray solicitudes = json_data.getJSONArray("solicitudes");
-                    JSONObject unaSolicitud = solicitudes.getJSONObject(0);
-                    boolean historial = unaSolicitud.getBoolean("estado");
-                    if (historial) {
-                        link_api = "https://wssecurity.herokuapp.com/api-seguridad/historial-anomalias/?historial_id=" + unaSolicitud.getInt("historial_id");
-                        ServicioTask servicioTask = new ServicioTask(getContext(), "GET", link_api, this);
-                        servicioTask.execute();
-                    } else {
-                        consul_solicitud(unaSolicitud.getInt("solicitud_id"));
-                    }
-                } else {
-                    consul_solicitud(json_data.getInt("solicitud_id"));
+            } else if(json_data.has("solicitud")) {
+                if(json_data.getBoolean("solicitud") != true){
+                    link_api = "https://wssecurity.herokuapp.com/api-seguridad/historial-anomalias/?tipo_ultimo=Solicitado";
+                    ServicioTask servicioTask = new ServicioTask(getContext(), "GET", link_api, this);
+                    servicioTask.execute();
+                }else{
+                    consul_solicitud();
+                }
+            }else{
+                if(json_data.getBoolean("mensaje")){
+                    consul_solicitud();
+                }else{
+                    Toast.makeText(getContext(), "Existió un error, por favor intente nuevamente", Toast.LENGTH_LONG).show();
+                    progDailog.dismiss();
                 }
             }
         }catch (JSONException ex){
-            System.out.println(ex.getMessage());
-            Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "Existió un error, por favor intente nuevamente", Toast.LENGTH_LONG).show();
         }
     }
-    public void consul_solicitud(int solicitud_id){
-        link_api = "https://wssecurity.herokuapp.com/api-seguridad/solicitud/?solicitud_id=" + solicitud_id;
+    public void consul_solicitud(){
+        link_api = "https://wssecurity.herokuapp.com/api-seguridad/solicitud/";
         ServicioTask servicioTask = new ServicioTask(getContext(), "GET", link_api, this);
         servicioTask.execute();
     }
