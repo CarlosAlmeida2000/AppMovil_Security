@@ -16,7 +16,7 @@
         android:layout_width="376dp"
         android:layout_height="24dp"
         android:layout_marginTop="8dp"
-        android:text="Perfil de usuario"
+        android:text="Profile"
         android:textAlignment="center"
         android:textColor="@color/color_letra"
         android:textSize="45px"
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:text="Nombres"
+            android:text="Names"
             android:textColor="@color/azul"
             android:textSize="42px" />
 
@@ -62,7 +62,7 @@
             android:layout_marginBottom="4dp"
             android:background="@color/white"
             android:ems="10"
-            android:hint="Ingrese sus nombres"
+            android:hint="Enter your names"
             android:inputType="textPersonName" />
 
         <TextView
@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:text="Usuario"
+            android:text="User"
             android:textColor="@color/azul"
             android:textSize="42px" />
 
@@ -81,7 +81,7 @@
             android:layout_marginBottom="4dp"
             android:background="@color/white"
             android:ems="10"
-            android:hint="Ingrese su usuario"
+            android:hint="Enter your user"
             android:inputType="textPersonName" />
 
         <TextView
@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:text="Clave actual"
+            android:text="Current password"
             android:textColor="@color/azul"
             android:textSize="42px" />
 
@@ -100,7 +100,7 @@
             android:layout_marginBottom="4dp"
             android:background="@color/white"
             android:ems="10"
-            android:hint="Ingrese su clave actual"
+            android:hint="Enter your current password"
             android:inputType="textPersonName|textPassword" />
 
         <TextView
@@ -108,7 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:text="Nueva clave"
+            android:text="New password"
             android:textColor="@color/azul"
             android:textSize="42px" />
 
@@ -119,7 +119,7 @@
             android:layout_marginBottom="4dp"
             android:background="@color/white"
             android:ems="10"
-            android:hint="Ingrese su nueva clave"
+            android:hint="Enter your new password"
             android:inputType="textPersonName|textPassword" />
 
         <TextView
@@ -127,7 +127,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:text="Confirme su clave"
+            android:text="Confirm your password"
             android:textColor="@color/azul"
             android:textSize="42px" />
 
@@ -138,7 +138,7 @@
             android:layout_marginBottom="7dp"
             android:background="@color/white"
             android:ems="10"
-            android:hint="Confirme su clave"
+            android:hint="Confirm your password"
             android:inputType="textPersonName|textPassword" />
 
         <LinearLayout
@@ -162,8 +162,8 @@
                 android:layout_marginStart="-7dp"
                 android:layout_marginTop="-9dp"
                 android:backgroundTint="@color/teal_200"
-                android:text="Guardar"
                 android:drawableLeft="@drawable/ic_save"
+                android:text="Save"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
         </LinearLayout>

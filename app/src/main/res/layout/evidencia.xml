@@ -37,7 +37,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
-        android:text="Hora:"
+        android:text="Hour:"
         android:textColor="#1E1E1E"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

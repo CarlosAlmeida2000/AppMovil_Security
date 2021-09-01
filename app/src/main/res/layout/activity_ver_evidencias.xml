@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Capturas de la alerta"
+        android:text="Alert captures"
         android:textAlignment="center"
         android:textColor="@color/color_letra"
         android:textSize="45px"
