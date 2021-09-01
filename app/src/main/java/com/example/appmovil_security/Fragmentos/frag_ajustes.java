@@ -15,8 +15,8 @@ import com.example.appmovil_security.Modelos.Componente;
 import com.example.appmovil_security.Modelos.HiloWebService;
 import com.example.appmovil_security.Modelos.IConfiguSistema;
 import com.example.appmovil_security.R;
-import com.example.appmovil_security.WebServices.Asynchtask;
-import com.example.appmovil_security.WebServices.ServicioTask;
+import com.example.appmovil_security.Fragmentos.WebServices.Asynchtask;
+import com.example.appmovil_security.Fragmentos.WebServices.ServicioTask;
 import com.mindorks.placeholderview.PlaceHolderView;
 import com.mindorks.placeholderview.SmoothLinearLayoutManager;
 

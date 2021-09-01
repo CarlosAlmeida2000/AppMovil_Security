@@ -9,8 +9,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.appmovil_security.WebServices.Asynchtask;
-import com.example.appmovil_security.WebServices.ServicioTask;
+import com.example.appmovil_security.Fragmentos.WebServices.Asynchtask;
+import com.example.appmovil_security.Fragmentos.WebServices.ServicioTask;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -69,7 +69,7 @@ public class Login extends AppCompatActivity implements Asynchtask {
                 Intent newActivity = new Intent(Login.this, MainActivity.class);
                 JSONArray json_array = json_response.getJSONArray("usuario");
                  this.setUsuario(json_array.getJSONObject(0));
-                Toast.makeText(this, "Bienvenido (a) " + getUsuario().get("nombre").toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Welcome " + getUsuario().get("nombre").toString(), Toast.LENGTH_LONG).show();
                 startActivity(newActivity);
             }else{
                 Toast.makeText(this, json_response.get("mensaje").toString(), Toast.LENGTH_LONG).show();

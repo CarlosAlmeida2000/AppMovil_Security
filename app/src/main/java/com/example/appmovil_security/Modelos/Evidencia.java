@@ -47,7 +47,7 @@ public class Evidencia {
     @Resolve
     protected void onResolved(){
         try{
-            this.txtnumEvidencia.setText("Evidencia # " + numEvidencia);
+            this.txtnumEvidencia.setText("Evidence # " + numEvidencia);
             this.hora.setText(unaEvidencia.getString("hora"));
             decoder = new DecoderImagen(unaEvidencia.getString("foto"));
             this.imagen.setImageBitmap(decoder.getImagen());

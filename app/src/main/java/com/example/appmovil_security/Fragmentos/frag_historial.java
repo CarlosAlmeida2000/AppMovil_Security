@@ -16,8 +16,8 @@ import android.widget.Toast;
 
 import com.example.appmovil_security.Modelos.Historial;
 import com.example.appmovil_security.R;
-import com.example.appmovil_security.WebServices.Asynchtask;
-import com.example.appmovil_security.WebServices.ServicioTask;
+import com.example.appmovil_security.Fragmentos.WebServices.Asynchtask;
+import com.example.appmovil_security.Fragmentos.WebServices.ServicioTask;
 import com.mindorks.placeholderview.PlaceHolderView;
 import com.mindorks.placeholderview.SmoothLinearLayoutManager;
 

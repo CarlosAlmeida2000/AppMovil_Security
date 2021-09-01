@@ -3,8 +3,8 @@ package com.example.appmovil_security.Modelos;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.example.appmovil_security.WebServices.Asynchtask;
-import com.example.appmovil_security.WebServices.ServicioTask;
+import com.example.appmovil_security.Fragmentos.WebServices.Asynchtask;
+import com.example.appmovil_security.Fragmentos.WebServices.ServicioTask;
 
 import org.json.JSONException;
 

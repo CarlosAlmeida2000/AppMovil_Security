@@ -1,13 +1,10 @@
 package com.example.appmovil_security.Fragmentos;
 
 import android.app.ProgressDialog;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +12,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.appmovil_security.Login;
 import com.example.appmovil_security.Modelos.DecoderImagen;
 import com.example.appmovil_security.R;
-import com.example.appmovil_security.WebServices.Asynchtask;
-import com.example.appmovil_security.WebServices.ServicioTask;
+import com.example.appmovil_security.Fragmentos.WebServices.Asynchtask;
+import com.example.appmovil_security.Fragmentos.WebServices.ServicioTask;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -102,8 +98,8 @@ public class frag_control extends Fragment implements Asynchtask {
     }
     private void showDialog(){
         progDailog = new ProgressDialog(getContext());
-        progDailog.setTitle("Consultando una imagen actual de su bien inmueble");
-        progDailog.setMessage("por favor, espere...");
+        progDailog.setTitle("Consulting a current image of your real estate");
+        progDailog.setMessage("please wait...");
         progDailog.setIndeterminate(false);
         progDailog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progDailog.setCancelable(true);
